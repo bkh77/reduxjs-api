@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { connect } from "react-redux";
-import { getPosts, addPost, editPost, deletePost} from "../../store/posts";
+import { getPosts, addPost, editPost, deletePost} from "../../store/reducers/posts";
 import PostModal from "./PostModal";
 
 function Posts({ posts, getPosts, addPost, editPost, deletePost }) {

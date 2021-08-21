@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import { apiCall } from "./middleware/apiCallAction";
+import { apiCall } from "../middleware/apiCallAction";
 
 const posts = createSlice({
   name: "posts",

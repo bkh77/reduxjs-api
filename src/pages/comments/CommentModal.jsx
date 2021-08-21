@@ -2,18 +2,19 @@ import React from "react";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 import { AvForm, AvField } from "availity-reactstrap-validation";
 
-function UserModal({ modal, toggle, onSubmit, currentItem,  }) {
+function CommentModal({ modal, toggle, onSubmit, currentItem }) {
   return (
     <Modal isOpen={modal} toggle={toggle}>
-      <ModalHeader>Add user</ModalHeader>
+      <ModalHeader>Add comment</ModalHeader>
       <ModalBody>
-        <AvForm id="postForm" onSubmit={onSubmit} model={currentItem}>
+        <AvForm
+          id="postForm"
+          onSubmit={onSubmit}
+          model={currentItem }
+        >
           <AvField name="name" label="Name" required />
           <AvField name="email" label="Email" required />
-          <AvField name="address" label="Address" required />
-          <AvField name="phone" label="Phone" required />
-          <AvField name="website" label="Website" required />
-          <AvField name="company" label="Company" required />
+          <AvField type="textarea" name="body" label="Body" required />
         </AvForm>
       </ModalBody>
       <ModalFooter>
@@ -28,4 +29,4 @@ function UserModal({ modal, toggle, onSubmit, currentItem,  }) {
   );
 }
 
-export default UserModal;
+export default CommentModal;

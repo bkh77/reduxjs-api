@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { getUsers, addUser, editUser,deleteUser } from "../../store/users";
+import { getUsers, addUser, editUser,deleteUser } from "../../store/reducers/users";
 import UserModal from "./UserModal";
 import * as Icon from "react-bootstrap-icons";
 
